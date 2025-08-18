@@ -37,8 +37,8 @@ class AppBarBuilder {
           fontWeight: FontWeight.w700,
         ),
         tabs: const [
-          Tab(text: 'Status'),
           Tab(text: 'Chats'),
+          Tab(text: 'Status'),
         ],
       ),
     );

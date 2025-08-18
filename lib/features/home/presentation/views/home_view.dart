@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/features/home/presentation/views/widgets/chats_tab.dart';
+import 'package:whatsapp/features/home/presentation/views/widgets/status_tab.dart';
 
 import '../../../../core/helper/build_appbar.dart';
 
@@ -31,10 +33,7 @@ class _HomeViewState extends State<HomeView>
       appBar: AppBarBuilder.buildHomeAppBar(_tabController),
       body: TabBarView(
         controller: _tabController,
-        children: const [
-          Center(child: Text('Status Tab Content')),
-          Center(child: Text('Chats Tab Content')),
-        ],
+        children: const [ChatsTab(), StatusTab()],
       ),
     );
   }
