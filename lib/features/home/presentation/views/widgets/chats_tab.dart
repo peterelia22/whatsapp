@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/core/utils/app_colors.dart';
+import 'package:whatsapp/features/home/presentation/views/chat_view.dart';
 
 import 'chat_item.dart';
 
@@ -18,6 +19,17 @@ class ChatsTab extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final chat = chatData[index];
                   return ChatItem(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChatView(
+                            contactName: chat['name'],
+                            avatarUrl: chat['avatarUrl'],
+                          ),
+                        ),
+                      );
+                    },
                     name: chat['name'],
                     message: chat['message'],
                     time: chat['time'],
