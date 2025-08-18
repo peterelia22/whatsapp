@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/core/utils/app_colors.dart';
 import 'package:whatsapp/core/utils/assets.dart';
 
 import 'widgets/chat_input.dart';
@@ -80,7 +81,7 @@ class _ChatViewState extends State<ChatView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF075E54),
+        backgroundColor: AppColors.lightPrimaryColor,
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
