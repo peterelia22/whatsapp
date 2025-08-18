@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/core/utils/assets.dart';
 
 import 'widgets/chat_input.dart';
 import 'widgets/message_list.dart';
@@ -142,7 +143,7 @@ class _ChatViewState extends State<ChatView> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/chat_background.png'),
+            image: AssetImage(Assets.imagesDefaultWallpaper),
             fit: BoxFit.cover,
           ),
         ),
